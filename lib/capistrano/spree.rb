@@ -1,0 +1,1 @@
+load File.expand_path('../tasks/spree.cap', __FILE__)
