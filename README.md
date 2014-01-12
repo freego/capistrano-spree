@@ -1,7 +1,10 @@
 # Capistrano::Spree
 
 Spree Commerce specific tasks for Capistrano v3.
-At the moment the only task is the ```public/spree``` directory symlink.
+
+At the moment the only task is the ```public/spree/``` directory symlink.
+
+Feel free to open issues or pull request if anything else is needed for your Spree deploy.
 
 ## Installation
 
