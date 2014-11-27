@@ -1,0 +1,17 @@
+namespace :deface do
+  desc 'Precompile deface templates'
+  task :precompile do
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'deface:precompile'
+        end
+      end
+    end
+  end
+
+  # RVM integration
+  if Gem::Specification::find_all_by_name('capistrano-rvm').any?
+    before :precompile, 'rvm:hook'
+  end
+end

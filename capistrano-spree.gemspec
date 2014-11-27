@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "capistrano-spree"
-  spec.version       = "1.0.1"
+  spec.version       = "1.0.2"
   spec.authors       = ["Alessandro Lepore"]
   spec.email         = ["a.lepore@freegoweb.it"]
   spec.summary       = %q{Spree Commerce support for Capistrano 3.x}
-  spec.description   = %q{Spree Commerce support for Capistrano 3.x}
+  spec.description   = spec.summary
   spec.homepage      = "https://github.com/freego/capistrano-spree"
   spec.license       = "MIT"
 
