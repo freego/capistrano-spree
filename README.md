@@ -1,24 +1,26 @@
 # Capistrano::Spree
 
-Spree Commerce specific tasks for Capistrano 3.x
+Spree Commerce specific tasks for Capistrano 3.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'capistrano-spree', '~> 1.0.0'
+```ruby
+gem 'capistrano-spree', '~> 1.0.0'
+```
 
 And then execute:
 
     $ bundle
 
-Require in `Capfile`:
+Add this line to your `Capfile`:
 
 ```ruby
 require 'capistrano/spree'
 ```
 
-If you use RVM on the server also add:
+If you use RVM on the server, also add:
 
 ```ruby
 gem 'capistrano-rvm'
@@ -27,15 +29,15 @@ gem 'capistrano-rvm'
 ## Included Tasks
 
 ### symlink of `public/spree` directory
-enabled by default
+This is enabled by default.
 
 ### deface precompile
-disable deface on your `production.rb`
+You have to disable deface on your `production.rb`:
 ```ruby
 config.deface.enabled = false
 ```
 
-and then call the task on `deploy.rb`:
+and then add the task to your `deploy.rb`:
 ```ruby
 after 'deploy:updated', 'deface:precompile'
 ```
