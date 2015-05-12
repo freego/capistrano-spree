@@ -11,7 +11,7 @@ namespace :deface do
   end
 
   # RVM integration
-  if Gem::Specification::find_all_by_name('capistrano-rvm').any?
+  if Rake.application.tasks.collect(&:to_s).include?("rvm:hook")
     before :precompile, 'rvm:hook'
   end
 end
